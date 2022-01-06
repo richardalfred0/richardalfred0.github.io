@@ -308,34 +308,23 @@ I have been developing websites for over 3 years. I have experience with HTML, C
         </h2>
         <div class="contact__form-container"> 
           <form id="fcf-form-id" class="fcf-form-class" method="POST" action="https://formspree.io/f/mvolglzn">
-            <div class="contact__form-field">
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="email"
-                class="contact__form-input"
-                name="_replyto"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
-            </button>
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+              <div class="contact__form-field">
+                <label class="contact__form-label" for="full-name">Full Name</label>
+                <input class="contact__form-input" type="text" name="name" id="full-name" placeholder="First and Last" required="">
+              </div>
+              <div class="contact__form-field">
+                <label class="contact__form-label for="email-address">Email Address</label>
+                <input class="contact__form-input" type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+              </div>
+              <div class="contact__form-field">
+                <label class="contact__form-label for="message">Message</label>
+                <textarea class="contact__form-input" rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+              </div>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+              </fieldset>
+              <input class="btn btn--theme contact__btn" type="submit" value="Submit">
+            </form>
           </form>
         </div>
       </div>
